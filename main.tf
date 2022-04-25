@@ -1,6 +1,6 @@
 terraform {
   backend "remote" {
-    organization = var.terraform_organization
+    organization = "GGLearning"
     workspaces {
       name = var.terraform_workspace
     }

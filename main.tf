@@ -2,7 +2,7 @@ terraform {
   backend "remote" {
     organization = "GGLearning"
     workspaces {
-      name = var.terraform_workspace
+      name = "piano-website"
     }
   }
 }

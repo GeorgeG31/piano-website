@@ -9,6 +9,7 @@ on:
 jobs:
   terraform:
     name: "Terraform"
+    environment: "production"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

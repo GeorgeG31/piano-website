@@ -75,7 +75,13 @@ jobs:
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve -input=false
-        
+      
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: ${{ github.workspace }}/website/*
+    
       - name: Upload to S3
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         uses: shallwefootball/s3-upload-action@master

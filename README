@@ -1,0 +1,11 @@
+This repository contains Terraform configuration to deploy a static website backed by AWS S3, the website itself written in HTML and GitHub workflow for CI/CD. The GitHub
+workflow will apply the configuration on push to the main branch and then upload the website HTML file to the S3 bucket; there is only one website file.
+
+To deploy code: 
+  -edit Terraform block in main.tf to use organization and workspace specific to you
+  -add AWS access key ID and secret access key under GitHub environment secret names "AWS_KEY_ID" and "AWS_SECRET_ACCESS_KEY" respectively
+  -add Terraform API token under GitHub respository secret name "TF_API_TOKEN"
+  -input the name of the S3 bucket under GitHub environment secret name "AWS_BUCKET"
+
+Additional note(s):
+  -the "Upload to S3" step in the GitHub workflow assumes the S3 bucket is in 'us-east-1' region, as is the default value for the respective Terraform variable

@@ -1,4 +1,4 @@
-This repository contains Terraform configuration to deploy a static website backed by AWS S3, the website itself written in HTML and GitHub workflow for CI/CD. The GitHub workflow will apply the configuration on push to the main branch and then upload the website HTML file to the S3 bucket; there is only one website file.
+This repository contains Terraform configuration to deploy a static website backed by AWS S3. The website itself is written in HTML and GitHub workflow is used for CI/CD. The GitHub workflow will apply the configuration on push to the main branch and then upload the website HTML file to the S3 bucket; there is only one website file.
 
 To deploy code: 
   -edit Terraform block in main.tf to use organization and workspace specific to you
